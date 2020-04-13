@@ -3,10 +3,12 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>My Resume</title>
 
   <link rel="stylesheet" href="css/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -14,6 +16,95 @@
 </head>
 
 <body>
-  <h1>My Resume</h1>
+  <div class="container">
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+        <a href="https://gallant-bhabha-df3163.netlify.com/">Portfolio</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+      <section class="banner">
+        <div class="banner-content">
+          <div class="banner-top">
+            <img src="images/avatar.jfif">
+            <h1>
+              Anh Truong - Full-Stack Developer
+            </h1>
+            <h3>
+              Technology is my jam!
+            </h3>
+          </div>
+          <div class="banner-bottom">
+            <p>Occasionally I have time to work on side projects, if you're interested, let me know by signing up on this website.</p>
+            <button class="team-up">Lets Team Up</button>
+          </div>
+        </div>
+      </section>
+
+      <section class=about>
+        <div class="about-me">
+          <h2>About me...</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </div>
+        <div class="skills">
+          <h2>My Skills:</h2>
+          <div class="skills-list">
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Javascript</li>
+              <li>Python</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="work">
+        <div class="work-history">
+          <table>
+            <tr class="table-title">
+              <th>Yrs</th>
+              <th>Company</th>
+              <th>Title</th>
+              <th>Tech Used</th>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Acme</td>
+              <td>Junior Developer</td>
+              <td>HTML / CSS</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Gen Co</td>
+              <td>Front-End Developer</td>
+              <td>Javascript, HTML / CSS, React</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Brand Name</td>
+              <td>Fullstack-Developer</td>
+              <td>Python, SQL, Docker</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <footer>
+        <address>
+          aqtruong97@gmail.com<br>
+          123-456-7890<br>
+          321 Cul De Sac
+        </address>
+        <h3>Copyright Anh Truong</h3>
+      </footer>
+
+  </div>
 </body>
 </html>

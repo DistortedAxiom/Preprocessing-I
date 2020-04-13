@@ -1,5 +1,5 @@
 // Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -13,8 +13,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -25,7 +25,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -50,10 +50,206 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html, body {
     height: 100%;
 }
 
+.center() {  /* mixin 1 */
+	justify-content: center;
+	align-items: center;
+}
+
+.table-border () { /*mixin 2 */
+	border: 1px solid #dddddd;
+	padding: 1.5rem;
+	text-align: left;
+}
+
+@p-color: #424242; /*font-color */
+
+@font: 'Lato', sans-serif; /* google front */
+
+@line-height: 1.8rem;
+
+html {
+font-size: 62.5%;
+font-family: @font;
+}
+
+p {
+	line-height: @line-height;
+}
+
+.container {
+	width: 800px;
+	font-size: 1.6rem;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	.center();
+
+	@media (max-width: 500px) {
+		width: 500px;
+		font-size: 1.6rem;
+	}
+
+	header {
+
+		margin: 2rem 2rem;
+
+		nav {
+			display: flex;
+			justify-content: space-between;
+			float: left;
+
+			a {
+				font-size: 1.8rem;
+				padding: 1.3rem;
+				text-decoration: none;
+				color: black;
+			}
+
+		}
+
+	}
+
+	.banner {
+
+		background-color: #E0E4EB;
+		display: flex;
+		justify-content: space-around;
+		width: 100%;
+
+		.banner-content {
+			margin: 2rem 2rem;
+
+			.banner-top {
+
+				margin-bottom: 2.5rem;
+
+				h1 {
+					padding-top: 2rem;
+					font-size: 4rem;
+				}
+
+				h3 {
+					padding-top: 1.5rem;
+					font-size: 2rem;
+				}
+
+				img {
+					width: 30rem;
+					height: 30rem;
+				}
+
+			}
+
+			.banner-bottom {
+
+				border-top: 1px solid black;
+				padding-top: 2.5rem;
+				margin-bottom: 1.5rem;
+
+				p {
+					font-size: 1.8rem;
+					color: @p-color;
+				}
+
+				button {
+					padding: 1rem 1rem;
+					font-size: 1.8rem;
+					font-weight: bold;
+					border-radius: 0.5rem;
+					margin-top: 2rem;
+					background-color: gray;
+					color: white;
+				}
+			}
+
+		}
+	}
+
+	.about {
+		display: flex;
+		justify-content: space-around;
+		width: 100%;
+		margin-top: 2rem;
+
+		.about-me {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 5%;
+			padding-left: 1rem;
+			width: 50%;
+
+			h2 {
+				font-size: 3rem;
+			}
+
+			p {
+				padding-top: 1.5rem;
+				font-size: 1.8rem;
+				color: @p-color;
+			}
+		}
+
+		.skills {
+			display: flex;
+			flex-direction: column;
+			width: 50%;
+
+			h2 {
+				font-size: 2.5rem;
+				padding-left: 1.3rem;
+			}
+
+			ul {
+				margin: 2rem 2rem;
+
+				li {
+					font-size: 1.8rem;
+					border: 1px solid black;
+					padding: 1rem 1rem;
+				}
+
+			}
+		}
+	}
+
+	.work {
+
+		width: 100%;
+		margin-bottom: 2rem;
+
+		table {
+			font-size: 1.8rem;
+			width: 100%;
+
+			td, th {
+				.table-border();
+			}
+
+			tr:nth-child(even) {
+				background-color: #dddddd;
+			  }
+		}
+	}
+
+	footer {
+		padding: 3rem 3rem;
+		background-color: black;
+		color: white;
+		font-size: 1.8rem;
+		letter-spacing: 0.15rem;
+		width: 100%;
+		text-align: center;
+
+		address {
+			margin-bottom: 1.5rem;
+			font-size: 1.6rem;
+		}
+	}
+}
