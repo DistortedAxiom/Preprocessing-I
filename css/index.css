@@ -134,84 +134,157 @@ html,
 body {
   height: 100%;
 }
+/*font-color */
+/* google front */
 html {
   font-size: 62.5%;
+  font-family: 'Lato', sans-serif;
+}
+p {
+  line-height: 1.8rem;
 }
 .container {
-  width: 50%;
+  width: 800px;
   font-size: 1.6rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  /* mixin 1 */
   justify-content: center;
   align-items: center;
 }
-header {
+@media (max-width: 500px) {
+  .container {
+    width: 500px;
+    font-size: 1.6rem;
+  }
+}
+.container header {
   margin: 2rem 2rem;
 }
-header nav {
+.container header nav {
   display: flex;
   justify-content: space-between;
   float: left;
 }
-header nav a {
+.container header nav a {
   font-size: 1.8rem;
-  padding: 1rem;
+  padding: 1.3rem;
   text-decoration: none;
   color: black;
 }
-.banner {
+.container .banner {
   background-color: #E0E4EB;
   display: flex;
   justify-content: space-around;
+  width: 100%;
 }
-.banner .banner-content {
+.container .banner .banner-content {
   margin: 2rem 2rem;
 }
-.banner .banner-content .banner-top {
+.container .banner .banner-content .banner-top {
   margin-bottom: 2.5rem;
 }
-.banner .banner-content .banner-top h1 {
+.container .banner .banner-content .banner-top h1 {
   padding-top: 2rem;
   font-size: 4rem;
 }
-.banner .banner-content .banner-top h3 {
+.container .banner .banner-content .banner-top h3 {
   padding-top: 1.5rem;
   font-size: 2rem;
 }
-.banner .banner-content .banner-top img {
+.container .banner .banner-content .banner-top img {
   width: 30rem;
   height: 30rem;
 }
-.banner .banner-content .banner-bottom {
+.container .banner .banner-content .banner-bottom {
   border-top: 1px solid black;
   padding-top: 2.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
-.banner .banner-content .banner-bottom p {
+.container .banner .banner-content .banner-bottom p {
   font-size: 1.8rem;
+  color: #424242;
 }
-.banner .banner-content .banner-bottom button {
+.container .banner .banner-content .banner-bottom button {
   padding: 1rem 1rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
   margin-top: 2rem;
+  background-color: gray;
+  color: white;
 }
-.about {
+.container .about {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
+  margin-top: 2rem;
+  /* mixin 1 */
   justify-content: center;
   align-items: center;
 }
-.about .about-me {
+.container .about .about-me {
   display: flex;
   flex-direction: column;
+  margin-bottom: 5%;
+  margin-top: 1.5%;
+  padding-left: 1rem;
   width: 50%;
 }
-.about .about-me h2 {
+.container .about .about-me h2 {
   font-size: 3rem;
 }
-.about .skills {
+.container .about .about-me p {
+  padding-top: 1.5rem;
+  font-size: 1.8rem;
+  color: #424242;
+}
+.container .about .skills {
   display: flex;
   flex-direction: column;
   width: 50%;
+}
+.container .about .skills h2 {
+  font-size: 2.5rem;
+  padding-left: 1.3rem;
+}
+.container .about .skills ul {
+  margin: 2rem 2rem;
+}
+.container .about .skills ul li {
+  font-size: 1.8rem;
+  border: 1px solid black;
+  padding: 1rem 1rem;
+}
+.container .work {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.container .work table {
+  font-size: 1.8rem;
+  width: 100%;
+}
+.container .work table td,
+.container .work table th {
+  /*mixin 2 */
+  border: 1px solid #dddddd;
+  padding: 1.5rem;
+  text-align: left;
+}
+.container .work table tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.container footer {
+  padding: 3rem 3rem;
+  background-color: black;
+  color: white;
+  font-size: 1.8rem;
+  letter-spacing: 0.15rem;
+  width: 100%;
+  text-align: center;
+}
+.container footer address {
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
 }
