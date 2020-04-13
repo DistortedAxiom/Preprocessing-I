@@ -1,5 +1,5 @@
 // Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -13,8 +13,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -25,7 +25,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -57,3 +57,112 @@ html, body {
     height: 100%;
 }
 
+.center() {
+	justify-content: center;
+	align-items: center;
+}
+
+html {
+font-size: 62.5%;
+}
+
+.container {
+	width: 50%;
+	font-size: 1.6rem;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	.center();
+}
+
+header {
+
+	margin: 2rem 2rem;
+
+	nav {
+		display: flex;
+		justify-content: space-between;
+		float: left;
+
+		a {
+			font-size: 1.8rem;
+			padding: 1rem;
+			text-decoration: none;
+			color: black;
+		}
+
+	}
+
+}
+
+.banner {
+
+	background-color: #E0E4EB;
+	display: flex;
+	justify-content: space-around;
+
+	.banner-content {
+		margin: 2rem 2rem;
+
+		.banner-top {
+
+			margin-bottom: 2.5rem;
+
+			h1 {
+				padding-top: 2rem;
+				font-size: 4rem;
+			}
+
+			h3 {
+				padding-top: 1.5rem;
+				font-size: 2rem;
+			}
+
+			img {
+				width: 30rem;
+				height: 30rem;
+			}
+
+		}
+
+		.banner-bottom {
+
+			border-top: 1px solid black;
+			padding-top: 2.5rem;
+			margin-bottom: 2rem;
+
+			p {
+				font-size: 1.8rem;
+			}
+
+			button {
+				padding: 1rem 1rem;
+				margin-top: 2rem;
+			}
+		}
+
+	}
+}
+
+.about {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	.center();
+
+	.about-me {
+		display: flex;
+		flex-direction: column;
+		width: 50%;
+
+		h2 {
+			font-size: 3rem;
+		}
+	}
+
+	.skills {
+		display: flex;
+		flex-direction: column;
+		width: 50%;
+	}
+}
